@@ -1,0 +1,149 @@
+html{
+    width: 80%;
+    margin: auto;
+    scroll-behavior: smooth;
+    display: block;
+}
+body { 
+    margin: auto;
+    align-items: center;
+    background-color: rgb(141, 211, 189);
+    color: #000; 
+    font-family: 'Montserrat', sans-serif; 
+}
+.me{
+    border-radius: 50%;
+    width: 225px;
+    height: 225px;
+    padding: 10px;
+}  
+
+.header{
+    height: 50px;
+    padding: 5px;
+}
+.leftGroup{
+    background-color: #e9c0b1;
+    text-align: center;
+    border-radius: 10px
+}
+.rightGroup{
+    padding: 1px;
+}
+.leftGroup ul{
+    list-style-type: none;
+    margin-right: 30px;
+}
+.footer{
+  height: 50px;
+  display: flex;
+  width: 100%;
+}
+.intro{
+  display: flex;
+  margin-left: 300px;
+  padding: 1px;
+}
+.introp{
+  margin-top: 15px;
+}
+h2 { 
+  background-color: #fff; 
+  color: #000; 
+  font-weight: bold; 
+  border-radius: 5px; 
+  padding: 5px 10px; 
+}  
+.menu{
+  text-transform: uppercase;
+  list-style-type: none;
+}
+.menu ul li {
+  display: inline;
+  margin: 20px;
+}
+.menu a{
+  color: #000;
+}
+h1 {
+  margin-left: 30px;
+  font-size: 50px;
+}
+span{
+  margin-left: 30px;
+  font-size: 23px;
+}
+.am {
+  margin-left: 30px;
+}
+details{
+  margin-left: 30px;
+}
+.Education{
+  padding: 1px;
+}
+pre{
+  background-color: rgb(227, 244, 239);
+  border: rgb(50, 156, 122) 1px solid;
+  border-radius: 3px; 
+}
+.HSkills ul{
+  list-style: circle;
+}
+.SSkills ul{
+  list-style: circle;
+}
+.Projects {
+  text-align: center;
+}
+.project_item{
+  margin: 20px;
+  background-color: rgb(97, 202, 169);
+  border: rgb(50, 156, 122) solid 2px;
+  border-radius: 5px;
+  text-shadow: 0px 4px 4px rgb(134, 164, 156);   
+}
+.projectsimage{
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0px 4px 4px rgb(134, 164, 156);
+  width:925px; 
+  height:400px;
+}
+.project_item:hover{
+  border-radius: 5px;
+  filter: brightness(90%);
+  box-shadow: 0px 4px 4px rgb(70, 150, 129);
+}
+.Projects h2{
+  color: #000;
+  background-color:  rgb(97, 202, 169);
+}
+.footer_year{
+   margin-top: 20px;
+}
+.footerUL{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   text-align: justify;
+   list-style-type: none;
+}
+.RSSchool{
+  width:86px;
+  height:32px;
+}
+.GitHub{
+  width:32px; 
+  height:32px;
+}
+.Projects a{
+   text-decoration: none;
+}
+.footer img{
+   margin-top: 10px;
+}
+.footer a{
+   text-decoration: none;
+   color: #1b1a1a;
+}

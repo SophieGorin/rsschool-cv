@@ -1,0 +1,345 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазинчик</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+    <div id="app">
+        <header>
+            <div class="navbar navbar-default">
+                <h1 v-text="sitename"></h1>
+            </div>
+            <div class="nav navbar-nav navbar-right cart">
+                <div class="cart-container">
+                  <img src="./img/cart-icon.png" alt="Cart icon" width="40"> 
+                  <span class="shopping-cart">
+                    {{cartItemCount}}
+                  </span>
+                </div>
+                <button class="btn"
+                v-on:click="showCheckout">
+                Оформить заказ
+                </button>
+              </div>
+        </header>
+        <main>
+            <div v-if="showProduct" class="main-card">
+                <div class="row product">
+                    <div class="col">
+                        <figure>
+                            <img v-bind:src="product_1.image">
+                        </figure>
+                    </div>
+                    <div class="col col-expand">
+                        <h2 v-text="product_1.title"></h2>
+                        <p v-html="product_1.description"></p>
+                        <p class="price">
+                            {{product_1.price | formatPrice}}
+                        </p>
+                        <button class="default" 
+                        v-on:click="addToCart"
+                        v-if="canAddToCard">
+                        Добавить в корзину</button>
+                        <button class="disabled" 
+                        v-else>
+                        Добавить в корзину</button>
+                        <span class="inventory-message" v-if="product_1.availableInventory - cartItemCount === 0">
+                            Нет в наличии
+                        </span>
+                        <span class="inventory-message" v-else-if="product_1.availableInventory - cartItemCount < 5">
+                            Осталось {{product_1.availableInventory - cartItemCount}} штуки!
+                        </span>
+                        <span class="inventory-message" v-else>
+                            Купить сейчас!
+                        </span>
+                        <div class="rating">
+                            <span v-bind:class="{'rating-active': checkRating1(n)}" v-for="n in 5">★</span>
+                        </div>
+                    </div>
+                </div> 
+                <div class="row product">
+                    <div class="col">
+                        <figure>
+                            <img v-bind:src="product_2.image">
+                        </figure>
+                    </div>
+                    <div class="col col-expand">
+                        <h2 v-text="product_2.title"></h2>
+                        <p v-html="product_2.description"></p>
+                        <p class="price">
+                            {{product_2.price | formatPrice}}
+                        </p>
+                        <button class="default" v-on:click="addToCart"> Добавить в корзину</button>
+                        <span class="inventory-message" v-if="product_2.availableInventory - cartItemCount === 0">
+                            Нет в наличии
+                        </span>
+                        <span class="inventory-message" v-else-if="product_2.availableInventory - cartItemCount < 5">
+                            Осталось {{product_2.availableInventory - cartItemCount}} штуки!
+                        </span>
+                        <span class="inventory-message" v-else>
+                            Купить сейчас!
+                        </span>
+                        <div class="rating">
+                            <span v-bind:class="{'rating-active': checkRating2(n)}" v-for="n in 5">★</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row product">
+                    <div class="col">
+                        <figure>
+                            <img v-bind:src="product_3.image">
+                        </figure>
+                    </div>
+                    <div class="col col-expand">
+                        <h2 v-text="product_3.title"></h2>
+                        <p v-html="product_3.description"></p>
+                        <p class="price">
+                            {{product_3.price | formatPrice}}
+                        </p>
+                        <button class="default" v-on:click="addToCart"> Добавить в корзину</button>
+                        <span class="inventory-message" v-if="product_3.availableInventory - cartItemCount === 0">
+                            Нет в наличии
+                        </span>
+                        <span class="inventory-message" v-else-if="product_3.availableInventory - cartItemCount < 5">
+                            Осталось {{product_3.availableInventory - cartItemCount}} штуки!
+                        </span>
+                        <span class="inventory-message" v-else>
+                            Купить сейчас!
+                        </span>
+                        <div class="rating">
+                            <span v-bind:class="{'rating-active': checkRating3(n)}" v-for="n in 5">★</span>
+                        </div>
+                    </div>
+                </div>             
+                <div class="row product">
+                    <div class="col">
+                        <figure>
+                            <img v-bind:src="product_4.image">
+                        </figure>
+                    </div>
+                    <div class="col col-expand">
+                        <h2 v-text="product_4.title"></h2>
+                        <p v-html="product_4.description"></p>
+                        <p class="price">
+                            {{product_4.price | formatPrice}}
+                        </p>
+                        <button class="default" v-on:click="addToCart"> Добавить в корзину</button>
+                        <span class="inventory-message" v-if="product_4.availableInventory - cartItemCount === 0">
+                            Нет в наличии
+                        </span>
+                        <span class="inventory-message" v-else-if="product_4.availableInventory - cartItemCount < 5">
+                            Осталось {{product_4.availableInventory - cartItemCount}} штуки!
+                        </span>
+                        <span class="inventory-message" v-else>
+                            Купить сейчас!
+                        </span>
+                        <div class="rating">
+                            <span v-bind:class="{'rating-active': checkRating4(n)}" v-for="n in 5">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div v-else>
+                <div class="form-content">
+                    <div class="col-md-6">
+                        <strong>Имя:</strong>
+                        <input v-model="order.firstName" class="form-control"/>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Фамилия:</strong>
+                        <input v-model="order.lastName" class="form-control"/>
+                    </div>
+                        <div class="col-md-12"><strong>Адрес:</strong></div>
+                        <div class="col-md-12">
+                            <input v-model="order.address" class="form-control" />
+                        </div>
+                    
+                        <div class="col-md-12"><strong>Город:</strong></div>
+                        <div class="col-md-12">
+                            <input v-model="order.city" class="form-control" />
+                    
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <strong>Регион:</strong>
+                            <select v-model="order.state" class="form-control">
+                                <option disabled value=""><strong>Регион:</strong></option>
+                                <option>Дальний Восток</option>
+                                <option>Московская область</option>
+                                <option>Мурманская область</option>
+                                <option>Краснодарский край</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-4">
+                            <strong>Индекс:</strong>
+                            <input v-model="order.zip" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 boxes">
+                            <input type="checkbox"
+                                id="gift"
+                                value="true"
+                                v-bind:true-value="order.sendGift"
+                                v-bind:false-value="order.dontSendGift"
+                                v-model="order.gift" > 
+                            <label for="gift">Отправить в подарок?</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 boxes">
+                            <input type="radio"
+                                id="home"
+                                value="Дом"
+                                v-bind="order.home"
+                                v-model="order.method">
+                            <label for="home">Дом</label></input>
+                            <input type="radio" 
+                                id="business"
+                                value="Бизнес"
+                                v-bind="order.business"
+                                v-model="order.method">
+                            <label for="business">Бизнес</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 verify">
+                        <pre> 
+                            Имя: {{order.firstName}} 
+                            Фамилия: {{order.lastName}} 
+                            Адрес: {{order.address}}
+                            Город: {{order.city}}
+                            Индекс: {{order.zip}}
+                            Регион: {{order.state}}
+                            Покупка: {{order.method}}
+                            Подарок: {{order.gift}}
+                        </pre>
+                    </div>  
+                </div>
+            </div>  
+        </main>
+    </div>
+    <script>
+        let APP_LOG_LIFECYCLE_EVENTS = true;
+        let webstore = new Vue({
+            el: '#app',
+data: {
+                showProduct: true,
+                sitename: 'KOTESHOP',
+                order: {
+                    firstName: '',
+                    lastName: '',
+                    address: ' ',
+                    city: ' ',
+                    zip: '',
+                    state: '',
+                    method: 'Домашний адрес',
+                    business: 'Адрес предприятия',
+                    home: 'Домашний адрес',
+                    gift: 'Отправить подарок' ,
+                    sendGift: 'Отправить как подарок',
+                    dontSendGift: 'Не отправлять как подарок'
+
+                },
+                product_1: {
+                    id: 1001,
+                    title: "Корм для кошек Purina ONE",
+                    description: "Сухие корма Purina ONE® — это готовый рацион для питания кошек, в составе которого оптимальное соотношение питательных веществ, витаминов, микро- и макроэлементов. Сбалансированные корма разработаны ветеринарными врачами-диетологами с учетом породы, возраста, пола и особых потребностей питомца.",
+                    price: 120000,
+                    availableInventory: 5,
+                    rating:5,
+                    image: "https://shop.purina.ru/media/catalog/product/cache/6a5fe83f6d9a00ef1c7118f1fd81241c/1/2/12562622.jpeg"
+                },
+                product_2: {
+                    id: 1002,
+                    title: "Корм для собак Royal Canin",
+                    description: "Макси эдалт: сухой корм для собак в возрасте с 15 месяцев до 5 лет. MAXI Adult (Макси эдалт) удовлетворяет особые потребности крупных собак (весом от 26 до 44 кг).Обладает высокой усвояемостью, способствует здоровью пищеварительной системы.",
+                    price: 150000,
+                    availableInventory: 5,
+                    rating:4,
+                    image: "https://static.insales-cdn.com/images/products/1/1131/195798123/maxi-adult.png"
+                },
+                product_3: {
+                    id: 1003,
+                    title: "Корм для попугаев ВАКА",
+                    description: "Полноценные и сбалансированные корма изготовлены из отборного чистого зерна. По составу, калорийности и содержанию витаминов они максимально приближенны к рациону питомцев в естественной среде обитания. ",
+                    price: 98500,
+                    availableInventory: 5,
+                    rating:5,
+                    image: "https://main-cdn.sbermegamarket.ru/big1/hlr-system/1719432/100023033182b0.jpg"
+                },
+                product_4: {
+                    id: 1004,
+                    title: "Корм для хомяков Little One",
+                    description: "Полнорационный корм с добавлением витаминов и минеральных веществ. Разнообразный состав включает в себя зерна, семена, орехи и редкие плоды. Разработан с учетом специфических потребностей хомячков и не содержит острых компонентов, которые могут повредить нежные щеки питомцев. Корм прекрасно подойдет как для хомячков стандартного размера, так и для карликовых видов.",
+                    price: 85000,
+                    availableInventory: 5,
+                    rating:3,
+                    image: "https://catalog.detmir.st/media/SbM0SkS1cIvTD4NH3zECPvFkX26omGnqG8fyHveaUek=?preset=site_product_gallery_r450"
+                },  
+                cart: []   
+            },
+
+            methods: {
+                checkRating1(n){
+                    return this.product_1.rating - n >= 0;
+                },
+                checkRating2(n){
+                    return this.product_2.rating - n >= 0;
+                },
+                checkRating3(n){
+                    return this.product_3.rating - n >= 0;
+                },
+                checkRating4(n){
+                    return this.product_4.rating - n >= 0;
+                },
+                addToCart: function() {
+                    this.cart.push(this.product_1.id);
+                },
+                showCheckout () {
+                    this.showProduct = this.showProduct ? false : true;
+                }
+            },
+            
+            computed: {
+                cartItemCount: function () {
+                    return this.cart.length || '';
+                },
+                canAddToCard: function () {
+                    return this.product_1.availableInventory > this.cartItemCount;
+                }
+            },
+
+            filters: {
+                formatPrice: function (price) {
+                    if (!parseInt(price)) { return ""; }
+                    if (price > 99999) {
+                        let priceString = (price / 100).toFixed(2);
+                        let priceArray = priceString.split("").reverse();
+                        let index = 3;
+                        while (priceArray.length > index + 3) {
+                            priceArray.splice(index + 3, 0, ",");
+                            index += 4;
+                        }
+                        return "₽" + priceArray.reverse().join("");
+                    } else {
+                        return "₽" + (price / 100).toFixed(2);
+                    }
+                }
+        }
+    });
+    </script>
+</body>
+
+</html>
