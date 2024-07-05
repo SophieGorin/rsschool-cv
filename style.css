@@ -13,8 +13,8 @@ body {
 }
 .me{
     border-radius: 50%;
-    width: 225px;
-    height: 225px;
+    width: 20%;
+    height: 20%;
     padding: 10px;
 }  
 
@@ -67,11 +67,11 @@ h2 {
 }
 h1 {
   margin-left: 30px;
-  font-size: 50px;
+  font-size: 300%;
 }
 span{
   margin-left: 30px;
-  font-size: 23px;
+  font-size: 150%;
 }
 .am {
   margin-left: 30px;
