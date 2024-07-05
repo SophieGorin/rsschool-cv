@@ -1,1 +1,175 @@
-# Какое-нибудь содержание1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <div class="menu">
+                <ul class="menu">
+                  <li><a href="#Contacts">Contacts</a></li>
+                  <li><a href="#Education">Education</a></li>
+                  <li><a href="#AboutMe">About Me</a></li>
+                  <li><a href="#HSkills">Hard Skills</a></li>
+                  <li><a href="#SSkills">Soft Skills</a></li>
+                  <li><a href="#CodeEx">Code Example</a></li>
+                  <li><a href="#Projects">My Projects</a></li>
+          
+                </ul>
+              </div>
+        </div>
+
+        <div class="main"> 
+            <div class="leftGroup">
+                <div class="intro">
+                <img class="me" src="img/mecv.jpg" alt="my_photo_cv">
+                <div class="introp"><h1>Gorin Sofya</h1>
+                <span> Web developer Junior</span></div>
+            </div>
+                <div class="Contacts">
+                     <a id="Contacts"><h2>Contacts</h2></a>
+                        <ul>
+                            <li>Discord:
+                            SophieGorin (sophiegorin)
+                            </li>
+                            <li>Telegram:
+                                @S_oi_filis
+                            </li>
+                            <li>Email:
+                                Sophie.gorin16@gmail.com
+                            </li>
+                            <li>Phone:
+                                +7(914) 656 13-97
+                            </li>
+                        </ul>
+                </div>
+                <div class="Education">
+                    <a id="Education"><h2>Education</h2></a>
+                        <ul>
+                            <li><p>2021-2025<br/>
+                            St. Petersburg College telecommunications idd after. E.T. Krenkel - web and multimedia application developer</p>
+                            </li>
+                            <li><p>2024-now<br/>
+                                JS/FE Pre-School</p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="rightGroup">
+                
+                <div class="AboutMe_container">
+                    <h2><a id="AboutMe">About Me</a></h2>
+                    <p class="am">I like to study and learn something new. I like to read books, lead an active lifestyle and carefully monitor my daily routine. I don't like procrastinating. I like solving problems that combine creative and technical components. Since childhood, I have been interested in creativity, networks and mathematics.</p>
+                </div>
+                <div class="HSkills"> 
+                    <h2><a id="HSkills">Hard Skills</a></h2>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript (basic)</li>
+                        <li>Figma</li>
+                        <li>Photoshop, Gimp</li>
+                        <li>English - B2</li>
+                    </ul>
+                </div>
+                <div class="SSkills">
+                    <h2><a id="SSkills">Soft Skills</a></h2>
+                    <ul>
+                        <li>adaptability</li>
+                        <li>communication</li>
+                        <li>quick learner</li>
+                        <li>stress resistance</li>
+                        <li>emotional intelligence</li>
+                        <li>critical thinking</li>
+                    </ul>
+                </div>
+                <div class="CodeEx">
+                    <h2><a id="CodeEx">Code Example</a></h2>
+                    <details>
+                        <summary>From my college assignments</summary>
+                        <pre><code>
+        let form = document.createElement('form');
+        form.id = 'myForm';
+                            
+        let idInput = document.createElement('input');
+        idInput.type = 'text';
+        idInput.id = 'firstid';
+        idInput.placeholder = 'Имя';
+                            
+        let suridInput = document.createElement('input');
+        suridInput.type = 'text';
+        suridInput.id = 'lastid';
+        suridInput.placeholder = 'Фамилия';
+                            
+        let upperCaseBtn = document.createElement('button');
+        upperCaseBtn.textContent = 'Верхний регистр';
+        upperCaseBtn.onclick = function() {
+          idInput.value = idInput.value.toUpperCase();
+          suridInput.value = suridInput.value.toUpperCase();
+          document.write(idInput.value + " " + suridInput.value)
+        };
+                            
+        let lowerCaseBtn = document.createElement('button');
+        lowerCaseBtn.textContent = 'Нижний регистр';
+        lowerCaseBtn.onclick = function() {
+          idInput.value = idInput.value.toLowerCase();
+          suridInput.value = suridInput.value.toLowerCase();
+          document.write(idInput.value + " " + suridInput.value)
+        };
+                            
+        form.appendChild(idInput);
+        form.appendChild(suridInput);
+        form.appendChild(upperCaseBtn);
+        form.appendChild(lowerCaseBtn);
+                            
+        document.body.appendChild(form);
+                            
+        function setCase(formid) {
+          return document.getElementById(formid);
+        }
+                        </code></pre>
+                      </details>
+                </div>
+                <h2><a id="Projects">My Projects</a></h2>
+                <div class="Projects">
+                    <div class="project_item">
+                        <a href="лаба8/index.html" target="_blank">
+                            <img src="img/auto.jpg" alt="Slider screenshot" class="projectsimage">
+                            <h2>Auto service</h2>
+                        </a>
+                    </div>
+                    <div class="project_item">
+                        <a href="пробуем/index.html" target="_blank">
+                            <img src="img/koteshop.jpg" alt="Slider screenshot" class="projectsimage">
+                            <h2>Koteshop</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="footerUL">
+                <li class="footer_Git">
+                    <a  href="https://github.com/SophieGorin" target="_blank">
+                        <img class="GitHub" src="img/github-mark.svg" alt="GitHub"><strong>GitHub</strong>
+                    </a>
+                </li>
+                <li class="footer_year">2024</li>
+                <li class="footer_rss">
+                    <a href="https://rs.school/js/" target="_blank">
+                    <img class="RSSchool" src="img/rs_school_js.svg" alt="RS School">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Github: https://github.com/SophieGorin-->
+</body>
+</html>
