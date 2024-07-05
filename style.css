@@ -43,8 +43,6 @@ body {
 .intro{
   display: flex;
   justify-content: center;
-  margin: auto;
-  padding: 1px;
 }
 .introp{
   margin-top: 15px;
@@ -62,7 +60,7 @@ h2 {
 }
 .menu ul li {
   display: inline;
-  margin: 20px;
+  margin: 0 auto;
 }
 .menu a{
   color: #000;
