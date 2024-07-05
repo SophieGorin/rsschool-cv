@@ -1,0 +1,87 @@
+body { 
+    background-color: #e9c0b1; 
+    color: #000; 
+    font-family: 'Montserrat', sans-serif; 
+  }  
+  .rating-active {
+    color: yellow;
+  }
+  button { 
+    background-color: #fff; 
+    color: #000; 
+    border: 2px solid #000; 
+    font-weight: bold; 
+    border-radius: 10px; 
+    padding: 5px 10px; 
+  }  
+  
+  button:hover { 
+    background-color: #000; 
+    color: #fff; 
+  }  
+  
+  .row { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px;
+  }  
+  
+  .col { 
+    flex: 1; 
+  }  
+  
+  .col-expand { 
+    flex: 3; 
+  }  
+  
+  .product { 
+    margin-bottom: 20px; 
+  }  
+  
+  .price { 
+    font-weight: bold; 
+  }  
+  
+  figure { 
+    margin: 0; 
+  }  
+  
+  img { 
+    max-width: 500px; 
+    max-height: 500px; 
+  }  
+  
+  .form-content { 
+    display: flex; 
+    flex-wrap: wrap; 
+  }  
+  
+  .form-group { 
+    margin-bottom: 10px; 
+  }  
+  
+  input[type="checkbox"],  
+  input[type="radio"] { 
+    margin-right: 5px; 
+  }  
+  
+  .boxes { 
+    display: flex; 
+    align-items: center; 
+  }  
+  
+  .verify { 
+    background-color: #fff; 
+    padding: 10px; 
+    margin-top: 20px; 
+  }
+
+  main {
+      padding: 30px;
+  }
+
+  pre {
+    font-family: 'Montserrat';
+    width: 600px;
+  }
+  
