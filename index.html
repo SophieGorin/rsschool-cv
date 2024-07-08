@@ -11,8 +11,8 @@
     <link rel="icon" href="assets/favicon.ico" />
 </head>
 <body>
-    <div class="container">
-        <header>
+    <nav>
+        <div class="header">
             <div class="menu">
                 <ul class="justify">
                   <li><a href="#Contacts">Contacts</a></li>
@@ -24,15 +24,16 @@
                   <li><a href="#Projects">My Projects</a></li>
                 </ul>
               </div>
-        </header>
-        <main> 
+        </div>
+
+        <div class="main"> 
             <div class="leftGroup">
                 <div class="intro">
                     <figure>
                         <img class="me" src="img/mecv.jpg" alt="my_photo_cv">
                     </figure>
-                <div class="introp"><h1>Gorin Sofya</h1>
-                <span> Web developer Junior</span></div>
+                    <div class="introp"><h1>Gorin Sofya</h1>
+                    <span> Web developer Junior</span></div>
             </div>
                 <div class="Contacts">
                      <a id="Contacts"><h2>Contacts</h2></a>
@@ -153,35 +154,29 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <nav>
-                <ul class="footerUL">
-                    <li class="footer_Git">
-                        <a  href="https://github.com/SophieGorin" target="_blank">
-                            <img class="GitHub" src="img/github-mark.svg" alt="GitHub"><strong>GitHub</strong>
-                        </a>
-                    </li>
-                    <li class="footer_year">2024</li>
-                    <li class="footer_rss">
-                        <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank">
-                        <img class="RSSchool" src="img/rs_school_js.svg" alt="RS School">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
-    </div>
+        </div>
+        <div class="footer">
+            <ul class="footerUL">
+                <li class="footer_Git">
+                    <a  href="https://github.com/SophieGorin" target="_blank">
+                        <img class="GitHub" src="img/github-mark.svg" alt="GitHub"><strong>GitHub</strong>
+                    </a>
+                </li>
+                <li class="footer_year">2024</li>
+                <li class="footer_rss">
+                    <a href="https://rs.school/js/" target="_blank">
+                    <img class="RSSchool" src="img/rs_school_js.svg" alt="RS School">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <script>
-        window.addEventListener("resize", AutoScale); //Масштабируем страницу при растягивании окна
-
-        AutoScale(); //Масштабируем страницу после загрузки
-
+        window.addEventListener("resize", AutoScale); 
+        AutoScale();
         function AutoScale()
         {
-            let width = window.innerWidth; //Ширина окна
-            //Если вы хотите проверять по размеру экрана, то вам нужно свойство window.screen.width
-
+            let width = window.innerWidth;
             if(width > 1280)
             {
             ChangeScale("big");
