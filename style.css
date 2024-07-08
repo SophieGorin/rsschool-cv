@@ -12,8 +12,8 @@ body {
     font-family: 'Montserrat', sans-serif; 
 }
 figure{
-width: 200px;
-height: 100px;
+width: 250px;
+height: 150px;
 margin: 0;
 }
 .me{
@@ -21,6 +21,9 @@ margin: 0;
     width: 100%;
     padding: 10px;
 }  
+.Contacts{
+  margin-top: 130px;
+}
 header{
     height: 50px;
     padding: 5px;
