@@ -20,10 +20,7 @@ height: 150px;
     width: 100%;
     padding: 10px;
 }  
-.Contacts{
-  margin-top: 130px;
-}
-header{
+.header{
     height: 50px;
     padding: 5px;
 }
@@ -40,7 +37,7 @@ header{
     list-style-type: none;
     margin-right: 30px;
 }
-footer{
+.footer{
   height: 50px;
   display: flex;
   width: 100%;
@@ -69,6 +66,9 @@ h2 {
 }
 .menu a{
   color: #000;
+}
+.Contacts{
+  margin-top: 130px;
 }
 h1 {
   margin-left: 30px;
@@ -146,10 +146,10 @@ pre{
 .Projects a{
    text-decoration: none;
 }
-footer img{
+.footer img{
    margin-top: 10px;
 }
-footer a{
+.footer a{
    text-decoration: none;
    color: #1b1a1a;
 }
