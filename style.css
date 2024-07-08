@@ -18,7 +18,7 @@ body {
     padding: 10px;
 }  
 
-.header{
+header{
     height: 50px;
     padding: 5px;
 }
@@ -35,7 +35,7 @@ body {
     list-style-type: none;
     margin-right: 30px;
 }
-.footer{
+footer{
   height: 50px;
   display: flex;
   width: 100%;
@@ -141,10 +141,10 @@ pre{
 .Projects a{
    text-decoration: none;
 }
-.footer img{
+footer img{
    margin-top: 10px;
 }
-.footer a{
+footer a{
    text-decoration: none;
    color: #1b1a1a;
 }
