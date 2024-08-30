@@ -79,6 +79,9 @@ h1 a:hover{
     color: #36b5ec;
 }
 /* cards */
+.main1{
+    padding-top: 59.5px;
+}
 h2{
     text-indent: 48px;
     position: relative;
