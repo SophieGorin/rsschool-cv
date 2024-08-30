@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link type="image/x-icon" href="./img/Track 1.svg" rel="shortcut icon">
+    <title>evarus.ru</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="./img/Logo.svg" alt="logo">
+            <div class="header-right">
+                <ul>
+                    <li>О ПРОЕКТЕ</li>
+                    <li>КОНТАКТЫ</li>
+                </ul>
+                <form action="test2.html"><button class="ad">ДОБАВИТЬ ОБЪЯВЛЕНИЕ</button></form>
+            </div>
+            
+        </div>
+    </header>
+    <main class="main">
+        <section class="link">
+            <h1>Создание объявления</h1>
+        </section>
+        <div class="attention">
+            <img src="./img/icon.svg" alt="icon">
+            <p>Заполните все поля формы на размещение своего объявления на сайте.<br/>
+                Размещение объявления платное. Стоимость за одно объявление составляет <span>990 руб.</span><br/>
+                Объявление будет опубликовано на сайте после оплаты и проверки модератором.</p>
+        </div>
+        <div class="form-container">
+            <form class="evacuationForm">
+              <div class="form-group">
+                <label for="city">Выберите город</label>
+                <select class="form-p" id="city" name="city" required>
+                  <option value="moscow" disabled selected>Москва</option>
+                  <option value="spb">Санкт-Петербург</option>
+                  <option value="novosibirsk">Новосибирск</option>
+                  <option value="ekaterinburg">Екатеринбург</option>
+                  <option value="vladivostok">Владивосток</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input class="form-p" type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="mobilePhone">Номер мобильного телефона</label>
+                <input class="form-p" type="tel" id="mobilePhone" name="mobilePhone" placeholder="+7 (999) 999-99-99" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="landlinePhone">Номер городского телефона</label>
+                <input class="form-p" type="tel" id="landlinePhone" name="landlinePhone" placeholder="+7 (999) 999-99-99" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}">
+              </div>
+        
+              <div class="form-group">
+                <label for="email">Веш email</label>
+                <input class="form-p" type="email" id="email" name="email" placeholder="example@example.com" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="address">Адрес стоянки эвакуатора</label>
+                <input class="form-p" id="address" name="address" placeholder="Введите адрес" required>
+              </div>
+              
+              <div class="title"><h2>ИНФОРМАЦИЯ</h2></div>
+
+              <div class="form-group">
+                <label for="title">Заголовок объявления</label>
+                <input class="form-p" type="text" id="title" name="title" maxlength="50" placeholder="Не более 50 символов" required>
+              </div>
+        
+              <div class="form-group">
+                <label for="description">Описание объявления:</label>
+                <textarea class="formd" id="description" name="description" maxlength="50" placeholder="Не более 50 символов" required></textarea>
+              </div>
+
+              <div class="title"><h2>ЦЕНЫ</h2></div>
+
+              <div class="form-group-price">
+                <label for="cars">Легковые автомобили</label>
+                <div class="form-cont">
+                    <div class="form-inp">
+                        <input class="form-price" type="text" id="cars" name="cars" required>
+                        <span class="currency">рублей</span>
+                    </div>
+                    <div class="checkbox-cont">
+                        <input class="checkbox" type="checkbox" id="carsCheckbox" name="carsCheckbox">
+                        <label class="checkbox-label" for="carsCheckbox">Услугу не оказываю</label>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="form-group">
+                <label for="moto">Мототехника</label>
+                <div class="form-cont">
+                    <div class="form-inp">
+                        <input class="form-price" type="text" id="moto" name="moto" required>
+                        <span class="currency">рублей</span>
+                    </div>
+                    <div class="checkbox-cont">
+                        <input class="checkbox" type="checkbox" id="motoCheckbox" name="motoCheckbox">
+                        <label class="checkbox-label" for="motoCheckbox">Услугу не оказываю</label>
+                    </div>
+                </div>    
+              </div>
+        
+              <div class="form-group">
+                <label for="suv">Внедорожник</label>
+                <div class="form-cont">
+                    <div class="form-inp">
+                        <input class="form-price" type="text" id="suv" name="suv" required>
+                        <span class="currency">рублей</span>
+                    </div>    
+                    <div class="checkbox-cont">
+                        <input class="checkbox" type="checkbox" id="suvCheckbox" name="suvCheckbox">
+                        <label class="checkbox-label" for="suvCheckbox">Услугу не оказываю</label>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="form-group">
+                <label for="minibus">Микроавтобус</label>
+                <div class="form-cont">
+                    <div class="form-inp">
+                        <input class="form-price" type="text" id="minibus" name="minibus" required>
+                        <span class="currency">рублей</span>
+                    </div>
+                    <div class="checkbox-cont">
+                        <input class="checkbox" type="checkbox" id="minibusCheckbox" name="minibusCheckbox">
+                        <label class="checkbox-label" for="minibusCheckbox">Услугу не оказываю</label>
+                    </div>
+                </div>    
+              </div>
+        
+              <div class="form-group">
+                <label for="country">Загородный тариф</label>
+                <div class="form-cont">
+                    <div class="form-inp">
+                        <input class="form-price" type="text" id="country" name="country" required>
+                        <span class="currency">руб/км</span>
+                    </div>
+                    <div class="checkbox-cont">
+                        <input class="checkbox" type="checkbox" id="countryCheckbox" name="countryCheckbox">
+                        <label class="checkbox-label" for="countryCheckbox">Услугу не оказываю</label>
+                    </div>
+                </div>    
+              </div>
+        
+              <div class="title" id="Photo"><h2>ФОТО</h2></div>
+
+              <div class="form-group">
+                <label for="photoUpload">Прикрепите фотографию к объявлению</label>
+                <button type="button" class="add" onclick="document.getElementById('photoUpload').click();">ЗАГРУЗИТЬ</button>
+                <input type="file" id="photoUpload" accept="image/*">
+              </div>
+                <div class="SubCheck">
+                    <input class="checkbox" type="checkbox" id="submitCheckbox" name="submitCheckbox">
+                    <label class="checkbox-label" for="submitCheckbox">Я соглашаюсь с правилами использования сервиса, а также с передачей и обработкой моих данных в evarus.ru. Я подтверждаю своё совершеннолетие и ответственность за размещение.</label>
+                </div>
+                <button class="submit" type="submit">ПРОДОЛЖИТЬ</button>
+            </form>
+        </div>          
+    </main>
+    <footer>
+        <img class="footer-logo" src="./img/Logo.svg" alt="logo">
+        <div class="footer-ul">
+            <ul>
+                <li>ВЫЗВАТЬ ЭВАКУАТОР</li>
+                <li>ДОБАВИТЬ ЭВАКУАТОР НА САЙТ</li>
+                <li>ПОМОЩЬ</li>
+                <li>ПРАВИЛА ОПЛАТЫ</li>
+                <li>ЗАЩИТА ПЕРСОНАЛЬНЫХ ДАННЫХ</li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.evacuationForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          alert('Форма успешно отправлена!');
+        });
+        document.querySelector('.form-group button').addEventListener('click', function() {
+            document.getElementById('photoUpload').click();
+        });
+    </script>
+</body>
+</html>
