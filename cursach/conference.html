@@ -1,0 +1,29 @@
+<!-- conference.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="conference-container">
+        <div id="videoContainer">
+            <video id="localVideo" autoplay muted></video>
+            <video id="remoteVideo" autoplay></video>
+        </div>
+        <div id="chat">
+            <textarea id="messageInput" placeholder="Type a message..."></textarea>
+            <button id="sendMessage">Send</button>
+            <div id="messages"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.webrtc.org/adapter/adapter-latest.js"></script>
+</body>
+
+</html>
